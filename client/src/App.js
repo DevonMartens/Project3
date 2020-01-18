@@ -1,21 +1,21 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Game from "./pages/GamePages";
+import Login from "./pages/LoginPages";
+import Profile from "./pages/ProfilePages";
 import "./App.css";
 
-class App extends Component {
-  render() {
+function App() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <Router> 
+        <div>
+          <Route exact path="/" component={Login} />
+          <Route exact path="/home" component={Login} />
+          <Route exact path="/profile" component= {Profile} />
+          <Route exact path="/game" component={Game} />
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      </Router>
     );
   }
-}
 
 export default App;
