@@ -1,0 +1,8 @@
+.title {
+    color: green;
+    text-align: center;
+    font-size: 300px;
+}
+.container {
+    border-color: 2px solid red; 
+}
