@@ -1,0 +1,57 @@
+[
+    {
+          "id": 1,
+          "userName": "SlyMan112",
+          "avatar": "https://www.dictionary.com/e/wp-content/uploads/2018/09/smirking-face.png", 
+          "location": "USA", 
+          "userType": "user", 
+          "score": "0", 
+          "questionsCorrect" : 0, 
+          "questionsTotal" : 0, 
+          "languages" : "Javascript,HTML,CSS"
+    }, 
+    {
+          "id": 2,
+          "userName": "OneScaredDudette",
+          "avatar": "http://blog.draperinc.com/wp-content/uploads/2016/04/Fearful_Face_Emoji.png", 
+          "location": "USA", 
+          "userType": "user", 
+          "score": "0", 
+          "questionsCorrect" : 0, 
+          "questionsTotal" : 0, 
+          "languages" : "Javascript"
+    }, 
+    {
+          "id": 3,
+          "userName": "TheThinker0001",
+          "avatar": "https://blog.draperinc.com/wp-content/uploads/2016/04/Thinking_Face_Emoji_Featured.jpg", 
+          "location": "India", 
+          "userType": "user", 
+          "score": "0", 
+          "questionsCorrect" : 0, 
+          "questionsTotal" : 0, 
+          "languages" : "Javascript,HTML,CSS,Java"
+    },
+    {
+          "id": 4,
+          "userName": "Backwards Bytes",
+          "avatar": "https://www.dictionary.com/e/wp-content/uploads/2018/03/Upside-Down_Face_Emoji.png", 
+          "location": "Canada", 
+          "userType": "user", 
+          "score": "0", 
+          "questionsCorrect" : 0, 
+          "questionsTotal" : 0, 
+          "languages" : "Javascript,HTML"
+    },
+    {
+          "id": 5,
+          "userName": "HappyCode-Man",
+          "avatar": "https://www.pngarts.com/files/3/Smile-Emoji-Face-PNG-Download-Image.png", 
+          "location": "Chile", 
+          "userType": "user", 
+          "score": "0", 
+          "questionsCorrect" : 0, 
+          "questionsTotal" : 0, 
+          "languages" : "Javascript,Java,Ruby"
+    }
+  ]
