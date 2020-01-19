@@ -1,8 +1,21 @@
+html {
+    background-color: black;
+}
 .title {
-    color: green;
+    color: white;
     text-align: center;
-    font-size: 300px;
+    font-size: 50px;
 }
 .container {
-    border-color: 2px solid red; 
+    background-color: green;
+}
+.AnswerBox {
+    background-color: blueviolet;
+}
+.AnswerChoices {
+    background-color: cyan;
+    color:grey;
+}
+.QuestionBox {
+    background-color: orange;
 }

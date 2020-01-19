@@ -1,4 +1,6 @@
 import React from "react";
+import "./Question";
+import "./Card";
 import "./style.css"
 
 function GamePages() {
