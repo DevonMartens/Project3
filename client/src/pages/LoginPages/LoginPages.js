@@ -9,10 +9,10 @@ function LoginPages() {
       return (
         <div className="inner-container">
           <div className="header">
-            Login
+            <h1 className="game-intro">Sign In or Register your account</h1>
           </div>
           <div className="login-box">
-  
+          <p className="Login-text">Sign In</p>
             <div className="input-group">
               <label htmlFor="username">Username</label>
               <input
