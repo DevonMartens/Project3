@@ -11,7 +11,7 @@ let user = {};
 
 
 //passport requires serialize and deserialize
-passport.serializeUser( fn: (user, cb) => {m
+passport.serializeUser( fn: (user, cb) => {
     clientID: keys.GITHUB.clientID,
     clientSecret: keys.GITHUB.clientSecret,
     callbackURL: "/auth/github/callback"
@@ -29,14 +29,31 @@ passport.serializeUser( fn: (user, cb) => {m
   app.get("/auth/github/callback", 
   passport.authenticate(('github'),
   options (req, res) => {
-res.redirect('/profile');
-  }));
+res.redirect('/profile'); 
 
-  const PORT = process.env.PORT || 5000;
+  //sessions to get user data
 
+  app.get("/user") (req, res) => {
+console.log("getting user data");
+res.send(user);
+
+});
+
+//log out api end point
+app.get('/auth/logout')
+  const PORT = process.env.PORT || 3000;
+console.log('log out')
+//reset user to empty
+user = {};
+
+res.redirect('/')
+  });
+   
   app.listen(PORT);
  //   User.findOrCreate({ githubId: profile.id }, function (err, user) {
  ////     return cb(err, user);
  //   });
  // } 
 //  ));   
+
+//
