@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import GameContainer from "./../components/GameComponents/GameContainer"
+import GameContainer from "../components/GameContainer"
 import "./style.css"
 import ProfilePages from "../ProfilePages";
 

@@ -1,0 +1,7 @@
+.inner-container {
+    background-color: blueviolet;
+    width: 40vw;
+    height: 60vh;
+    margin: 140px 450px;
+    border-radius: 8px;
+}
