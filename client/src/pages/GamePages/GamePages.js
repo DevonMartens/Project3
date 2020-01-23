@@ -1,14 +1,13 @@
-import React, {useState} from "react";
+import React from "react";
 import GameContainer from "./../components/GameComponents/GameContainer"
 import "./style.css"
-import ProfilePages from "../ProfilePages";
+
 
 
 
 
 function GamePages() {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [currentAnswer, setAnswer] = useState('');
+ 
   const questions = [
     {
         "id": 1,
@@ -207,7 +206,7 @@ function GamePages() {
     }
 ];
 
-const question = questions[currentQuestion];
+const question = questions[0];
   return (
     <div className="container">
      
