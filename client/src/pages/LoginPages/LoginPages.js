@@ -74,7 +74,10 @@ function LoginPages() {
                 className="register-password"
                 placeholder="Register password"/>
                 <br></br>
-                <button className="register-btn">Register</button>
+                <button className="register-btn character-img">Register</button>
+                <button className="register-btn character-img">Register</button>
+                <button className="register-btn character-img">Register</button>
+                <button className="register-btn character-img">Register</button>
             </div>
           </div>
           </div>
