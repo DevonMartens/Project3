@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import React from "react";
-import GameContainer from "./../components/GameComponents/GameContainer"
-=======
-import React, {useState} from "react";
 import GameContainer from "../components/GameContainer"
->>>>>>> 13925a2383322bedfdee9b0c397dc6c61ca904d3
 import "./style.css"
 
 
@@ -16,83 +11,76 @@ function GamePages() {
   const questions = [
     {
         "id": 1,
-        "question": "What is a method?",
+        "question": "JavaScript is a ______ Side Scripting Language",
         "level":"easy",
-        "answer_a":"11",
-        "answer_b": "34",
-        "answer_c": "33",
-        "answer_d": "33",
+        "answer_choices":["Server","ISP", "Browser","None of the Above"],
+        "corrct_answer": "c",
+        "explanation":"JavaScript is a Browser Side Scripting Language. ASP, PHP, Per1 are Server Side Scripting Languages.",
         "points": "100"
+        
     },
     {
       "id": 2,
-        "question": "What is a method?",
+        "question": "Which of the following is an advantage of using JavaScript?",
         "level":"easy",
-        "answer_a":"11",
-        "answer_b": "34",
-        "answer_c": "33",
-        "answer_d": "33",
+        "answer_choices":["Increased interactivity", "Less server interaction", "Immediate feedback from the users", "All of the above"],
+        "correct_answer": "d",
+        "explanation":"JavasScript ensures increased interactivity, less server interation and immediate feedback from users",
         "points": "100"
         
     },
     {
       "id": 3,
-      "question": "What is a method?",
+      "question": "What is the HTML tag under which one can write the JavaScript code?",
       "level":"easy",
-      "answer_a":"11",
-      "answer_b": "34",
-      "answer_c": "33",
-      "answer_d": "33",
+      "answer_choices":["<javascript>","<scripted>","<script>","<js>"],
+      "correct_answer": "c",
+      "explanation":"If we want to write a JavaScript code under HTML tag, you will have to use the script tag.",    
       "points": "100"
     },
     {
       "id": 4,
-      "question": "What is a method?",
+      "question": "Which of the following is not a JSON type?",
       "level":"easy",
-      "answer_a":"11",
-      "answer_b": "34",
-      "answer_c": "33",
-      "answer_d": "33",
+      "answer_choices":["Object","Date","Array","String"],
+      "correct_answer": "b",
+      "explanation":""     ,
       "points": "100"
     },
     {
       "id": 5,
-      "question": "What is a method?",
+      "question": "Which answer represents the following order of TYPES? Object, String, Boolean, Number",
       "level":"easy",
-      "answer_a":"11",
-      "answer_b": "34",
-      "answer_c": "33",
-      "answer_d": "33",
+      "answer_choices":["{},a string,false,0","[],0,true,0","{},0,false,0","{},hello,false,0"],
+      "correct_answer": "c",
+      "explanation": "",
       "points": "100"
     },
     {
       "id": 6,
-      "question": "What is a method?",
+      "question": "What is the corrct syntax for adding comments in JavaScript?",
       "level":"easy",
-      "answer_a":"11",
-      "answer_b": "34",
-      "answer_c": "33",
-      "answer_d": "33",
+      "answer_choices":["<!-This is a comment -&gt","//This is a comment","-This is a comment","**This is a comment"],
+      "correct_answer":"b",
+      "explanation": "Correct Syntax for comments in JavaScript is //comment.",
       "points": "100"
     },
     {
       "id": 7,
-      "question": "What is a method?",
+      "question": "What is the method in JavaScript used to remove the whitespace at the beginning and end of any string ?",
       "level":"easy",
-      "answer_a":"11",
-      "answer_b": "34",
-      "answer_c": "33",
-      "answer_d": "33",
+      "answer_choices":["strip()","trim()","stripped()","trimmed()"],
+      "correct_answer": "b",
+      "explaination":"The trim() method in JavaScript is used to remove the whitespaces at the beginning and end of the string.",
       "points": "100"
     },
     {
       "id": 8,
-      "question": "What is a method?",
+      "question": "Which built in method returns the character at the specified index?",
       "level":"easy",
-      "answer_a":"11",
-      "answer_b": "34",
-      "answer_c": "33",
-      "answer_d": "33",
+      "answer_choices":["characterAt()","getCharAt()", "charAt()","none of the above"],
+      "correct_answer": "c",
+      "explaination": "33",
       "points": "100"
     },
     {
@@ -218,6 +206,7 @@ const question = questions[0];
       <GameContainer  total ="20" current="1"
                       question = {question.question}
                       letter="a" answer={question.answer_a}
+                  
                      
                        />
 

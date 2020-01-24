@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import GameHeader from "../components/GameHeader";
+
 function LoginPages() {
   // return (
   //   <div>

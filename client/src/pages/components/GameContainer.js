@@ -17,6 +17,7 @@ class GameContainer extends Component {
               <button value={this.props.letter}>
                    <span className="letter">{this.props.letter}.</span>{this.props.answer}
               </button><br></br>
+                   
               <button className="btn btn-primary">Confirm and Continue</button>
              
             </div>
