@@ -1,6 +1,14 @@
 import React from "react";
 import "./style.css";
-import GameHeader from "../components/GameHeader";
+// require('dotenv').config()
+// import GITHUB from '../../config';
+const keys = require('../../config').clientID;
+
+// import GameHeader from "../components/GameHeader";
+const url = 'https://github.com/login/oauth/authorize?client_id=' + keys;
+
+
+
 function LoginPages() {
   // return (
   //   <div>
@@ -13,7 +21,7 @@ function LoginPages() {
           <div className="header">
             <h1 className="game-intro">Sign In or Register your account</h1>
           </div>
-          <div className="login-box">
+          <div className="login-box"> 
           <p className="Login-text">Sign In</p>
             <div className="input-group">
               <label htmlFor="username">Username</label>
@@ -78,7 +86,11 @@ function LoginPages() {
                 <button className="register-btn character-img">Register</button>
                 <button className="register-btn character-img">Register</button>
                 <button className="register-btn character-img">Register</button>
-            </div>
+
+              <button className="sugnin-btn" type="submit" id="github">
+                <a href = {url}>Sign in With Github</a>
+                </button>      
+                </div>
           </div>
           </div>
         </div>
