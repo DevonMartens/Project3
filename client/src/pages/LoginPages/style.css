@@ -1,7 +1,53 @@
-.inner-container {
-    background-color: rgb(224, 218, 211);
+.github-container {
+    background-color: blueviolet;
+    width: 50vw;
+    height: 80vh;
+    margin: 60px 445px;
+    border-radius: 8px;
 }
-.outter-container {
-    background-color: darkmagenta;
-    width: 20vw;
+.game-intro {
+    margin-left: 160px;
+}
+.github-container {
+    padding-left: 10px;
+}
+.signin-text {
+    font-size: 18px;
+}
+.signin-input {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    padding-left: 5px 10px;
+}
+.password-input {
+    margin-left: 14px;
+    border-radius: 2px;
+    padding-left: 5px 10px;
+}
+.signin-btn {
+    border-radius: 2px;
+    margin: 5px 0 10px 87px;
+    padding: 3px 55px;
+}
+.email-input {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    padding-left: 5px 10px;
+}
+.username-input {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    padding-left: 5px 10px;
+}
+.register-password {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    padding-left: 5px 10px;
+}
+.register-btn {
+    margin: 10px;
 }
