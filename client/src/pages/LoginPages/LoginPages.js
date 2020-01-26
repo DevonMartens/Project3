@@ -5,30 +5,34 @@ function LoginPages() {
   //   <div>
   //     <h1>Hey There!!</h1>
   //   </div>
+  // ************************ ADD THE HEADER DIV AND NAVIGATION DIV *******************************
   // );
       return (
-        <div className="inner-container">
+        <div className="github-container">
           <div className="header">
-            <h1 className="game-intro">Sign In or Register your account</h1>
+            <h1 className="game-intro">Sign In or Register to play!</h1>
           </div>
-          <div className="login-box">
-          <p className="Login-text">Sign In</p>
+          <div className="inner-container">
+          <p className="signin-text">Sign In</p>
             <div className="input-group">
-              <label htmlFor="username">Username</label>
+              <label htmlFor="username" className="githubusername">Username</label>
               <input
                 type="text"
                 name="username"
-                className="login-input"
+                className="signin-input"
                 placeholder="Username"/>
             </div>
   
             <div className="input-group">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password" className="githubpassword">Password</label>
               <input
                 type="password"
                 name="password"
-                className="login-input"
+                className="password-input"
                 placeholder="Password"/>
+                <br></br>
+                <button a href="https://github.com/login/oauth/authorize?client_id=f2effb81e7b98417a023" 
+                className="signin-btn" type="submit">Sign In</button>
             </div>
   
             {/* <button
@@ -39,17 +43,17 @@ function LoginPages() {
               go to componets for button attributes*/}
           </div>
           <div className="outter-container">
-          <div className="header">
-            Register
-          </div>
+          {/* <div className="header">
+          <p className="register-text">Register account associated with Github</p>
+          </div> */}
           <div className="Registration-box">
             <div className="input-group">
-              <p htmlFor="github-email">Enter email associated with your Github</p>
+            <p htmlFor="github-email">Enter email associated with your Github</p>
             <label htmlFor="Email">Github Email</label>
             <input
                 type="text"
                 name="Email"
-                className="login-input"
+                className="email-input"
                 placeholder="Github Email"/>
             </div>
             <div className="input-group">
@@ -58,7 +62,7 @@ function LoginPages() {
               <input
                 type="text"
                 name="Character's Name"
-                className="login-input"
+                className="username-input"
                 placeholder="Character's name"/>
             </div>
             <div className="input-group">
@@ -69,6 +73,11 @@ function LoginPages() {
                 name="register-password"
                 className="register-password"
                 placeholder="Register password"/>
+                <br></br>
+                <button className="register-btn character-img">Register</button>
+                <button className="register-btn character-img">Register</button>
+                <button className="register-btn character-img">Register</button>
+                <button className="register-btn character-img">Register</button>
             </div>
           </div>
           </div>
