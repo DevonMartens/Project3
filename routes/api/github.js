@@ -2,6 +2,7 @@ const superagent = require('superagent');
 require('dotenv').config()
 const clientID = process.env.clientID
 const clientSecret = process.env.clientSecret
+const accesstoken = process.env.accessToken
 
 module.exports = (app) => {
     app.get('/user/signin/callback', (req, res, next) => {
@@ -25,9 +26,27 @@ code: code
   const data = result.body
   res.send(data);
 
- // app.get('/user/', req, res, next) => {
+//post user info
+// const oauth = new OAuth2Server({model: ...});
+
+// function authenticateHandler(options) {
+//   return function(req, res, next) {
+//     let request = new Request(req);
+//     let response = new Response(res);
+//     return oauth.authenticate(request, response, options)
+//       .then(function(token) {
+//         res.locals.oauth = {token: token};
+//         next();
+//       })
+//       .catch(function(err) {
+//         // handle error condition
+//       });
+//   }
+}
+
+app.get('/user/', req, res, next) => {
       //this needs to be grabbed from backend based on who the user is help
-   //   const access_token =''
+
    //follow get user instruction
    //request
   // .get('https://api.github.com/user')

@@ -21,6 +21,7 @@
   "dependencies": {
     "@material-ui/core": "^4.8.3",
     "@material-ui/icons": "^4.5.1",
+    "@octokit/rest": "^16.40.0",
     "chalk": "^3.0.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -28,6 +29,8 @@
     "if-env": "^1.0.4",
     "lodash": "^4.17.15",
     "mongo": "^0.1.0",
+    "mongodb": "^3.5.2",
+    "mongoose": "^5.8.10",
     "passport": "^0.4.1",
     "passport-github": "^1.1.0",
     "react": "^16.12.0",
