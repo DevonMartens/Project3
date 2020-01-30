@@ -72,12 +72,12 @@
         "answer": "charAt()"
     },
     {
-        "question": "What is the correct JavaScript syntax to write "Hello World"?",
-        "optionA": "("Hello World");",
-        "optionB": "response.write("Hello World");",
-        "optionC": "echo "Hello World"",
-        "optionD": "document.write("Hello World")",
-        "answer": "document.write("Hello World")"
+        "question": "What is negative infinity in Java script?",
+        "optionA": " Any of below",
+        "optionB": "number in JavaScript, derived by dividing number by a negative number",
+        "optionC": "number in JavaScript, derived by dividing number by zero.",
+        "optionD": "number in JavaScript, derived by dividing negative number by zero",
+        "answer": " number in JavaScript, derived by dividing negative number by zero"
     },
     {
         "question": "Where is the correct place to insert a JavaScript?",

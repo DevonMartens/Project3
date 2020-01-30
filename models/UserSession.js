@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const bcrypt = require('bcrypt');
 
-const UserSchema = new mongoose.Schema({
+const UserSessionSchema = new mongoose.Schema({
   userName : {type: String, required: true}, 
   location: {type: String, required: true},
   userType: {type: String, required: true},
@@ -10,7 +10,7 @@ const UserSchema = new mongoose.Schema({
   email: {type: String, required: true},
   phone: {type: String, required: false},
   passoword: {type: String, required: true},
-  // score: {type: Number, required: true, default: 0}, 
+  score: {type: Number, required: true, default: 0}, 
   questionsCorrect: {type: Number, required: true, default: 0}, 
   questionsTotal: {type: Number, required: true}, 
   languages: {type: String, required: true, default: "none"}, 
