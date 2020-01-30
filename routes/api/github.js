@@ -1,8 +1,11 @@
 const superagent = require('superagent');
-require('dotenv').config()
-const clientID = process.env.clientID
-const clientSecret = process.env.clientSecret
-const accesstoken = process.env.accessToken
+// require('dotenv').config()
+const keys = require('../../client/src/config');
+//  const clientSecret = require('client/src/config.js');
+// const  accessToken = require('client/src/config.js');
+// const clientSecret = process.env.clientSecret
+// // const accesstoken = process.env.accessToken
+// import {Profile} from ('./client/src/pages/ProfilePages/ProfilePages.js');
 
 module.exports = (app) => {
     app.get('/user/signin/callback', (req, res, next) => {
@@ -14,17 +17,46 @@ module.exports = (app) => {
       message: 'error no code'
     });
 
-//post
+// post request written
 request
 .post('https://github.com/login/oauth/access_token')
-.send({ client_id: clientID,
-client_secret: clientSecret,
+.send({ client_id: keys.clientID, 
+client_secret: keys.clientSecret,
 code: code
   })
 .set('Accept', 'application/json')
 .then(function (result) {
   const data = result.body
-  res.send(data);
+  res.send(data); 
+
+// })
+ });
+});
+// });
+app.get('/user/:username/hovercard/', req, res, next => {
+//   //     this needs to be grabbed from backend based on who the user is help
+
+//   //  follow get user instruction
+request
+.get('https://api.github.com/user/')
+.set('Authorization', 'token ' +keys.accessToken)
+  .then(function(result){
+    console.log(result.body);
+res.send(result.body);
+
+
+  });
+});
+}; 
+
+
+// // code works above this line
+// const userInfo = result.body
+
+// export default userInfo;
+
+
+
 
 //post user info
 // const oauth = new OAuth2Server({model: ...});
@@ -42,22 +74,4 @@ code: code
 //         // handle error condition
 //       });
 //   }
-}
 
-app.get('/user/', req, res, next) => {
-      //this needs to be grabbed from backend based on who the user is help
-
-   //follow get user instruction
-   //request
-  // .get('https://api.github.com/user')
-//.set('Authorization: token ' +accesToken)
-//   .then(function(result){
-//res.send(result.body);
-//}
-
- //  });
-   
- // }
-});
-});
-};
