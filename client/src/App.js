@@ -5,8 +5,9 @@ import Game from "./pages/GamePages";
 import Login from "./pages/LoginPages";
 import Nav from "./pages/components/Nav"
 import Profile from "./pages/ProfilePages";
-// kyle
-import QuizInstructions from 'client/src/pages/GamePages/QuizInstructions';
+import QuizInstructions from "./pages/QuizInstructions";
+// kyles
+// import QuizInstructions from '../../pages/GamePages/QuizInstructions';
 import "./App.css";
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
           <Route exact path="/home" component={Login} />p
       
       {/* kyles input  */}
-          <Route path="/play/instructions" exact component={QuizInstructions}></Route>
+          <Route path="/play/instructions" component={QuizInstructions}></Route>
    
           <Route exact path="/profile" component= {Profile} />
           <Route exact path="/game" component={Game} />

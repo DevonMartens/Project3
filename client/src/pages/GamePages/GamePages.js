@@ -2,11 +2,11 @@ import React, { Component, Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import M from 'materialize-css';
 
-import questions from '/questions.json';
-import isEmpty from '/isEmpty';
-import correctNotification from 'client/src/assets/audio/crash.mp3';
-import wrongNotification from 'client/src/assets/audio/kick-bass.mp3';
-import buttonSound from 'client/src/assets/audio/snare.mp3';
+import questions from '../questions/questions.json';
+import isEmpty from '../IsEmpty/isEmpty.js';
+import correctNotification from '../../assets/audio/crash.mp3';
+import wrongNotification from '../../assets/audio/kick-bass.mp3';
+import buttonSound from '../../assets/audio/snare.mp3';
 
 
 class GamePages extends Component {
