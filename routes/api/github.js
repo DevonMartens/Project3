@@ -33,7 +33,7 @@ code: code
  });
 });
 // });
-app.get('/user/:username/hovercard/', req, res, next => {
+app.get('/user/', req, res, next => {
 //   //     this needs to be grabbed from backend based on who the user is help
 
 //   //  follow get user instruction
