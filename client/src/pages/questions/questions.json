@@ -1,59 +1,59 @@
 [
     {
-        "question": "What temperature does water boil at?",
-        "optionA": "50 degrees Celcius",
-        "optionB": "25 degrees Celcius",
-        "optionC": "100 degrees Celcius",
-        "optionD": "150 degrees Celcius",
-        "answer": "100 degrees Celcius"
+        "question": "JavaScript is a ________ Side Scripting Language.",
+        "optionA": "Server",
+        "optionB": "ISP",
+        "optionC": "Browser",
+        "optionD": "None of Above",
+        "answer": "Browser"
     },
     {
-        "question": "Who wrote Julius Caesar, Macbeth and Hamlet?",
-        "optionA": "Wole Soyinka",
-        "optionB": "William Shakespeare",
-        "optionC": "Ngozi Chimamanda Adichie",
-        "optionD": "Dan Brown",
-        "answer": "William Shakespeare"
+        "question": "Which of the following is an advantage of using JavaScript?",
+        "optionA": "Increased interactivity",
+        "optionB": "Less server interaction",
+        "optionC": "Immediate feedback from the users",
+        "optionD": "All of the above",
+        "answer": "All of the above"
     },
     {
-        "question": "What did the crocodile swallow in Peter Pan?",
-        "optionA": "A Book",
-        "optionB": "A Computer",
-        "optionC": "A pair of shoes",
-        "optionD": "Alarm Clock",
-        "answer": "Alarm Clock"
+        "question": "What is the HTML tag under which one can write the JavaScript code?",
+        "optionA": "javascript",
+        "optionB": "scripted",
+        "optionC": "script",
+        "optionD": "js",
+        "answer": "script"
     },
     {
-        "question": "Which is the only mammal that can’t jump?",
-        "optionA": "Dog",
-        "optionB": "Elephant",
-        "optionC": "Goat",
-        "optionD": "Lion",
-        "answer": "Elephant"
+        "question": "Which of the following is not a JSON type?",
+        "optionA": "Object",
+        "optionB": "date",
+        "optionC": "Array",
+        "optionD": "string",
+        "answer": "date"
     },
     {
-        "question": "Who lived at 221B, Baker Street, London?",
-        "optionA": "Tony Stark",
-        "optionB": "Morgan Freeman",
-        "optionC": "Sherlock Holmes",
-        "optionD": "Samuel L. Jackson",
-        "answer": "Sherlock Holmes"
+        "question": "Which answer represents the following order of TYPES? Object, String, Boolean, Number",
+        "optionA": " “{ }”, “a string”, “false”, “0” ",
+        "optionB": "[ ], 0, “true”, “0”",
+        "optionC": "{ }, “0”, false, 0",
+        "optionD": "{ }, hello, “false”, “0” ",
+        "answer": "{ }, “0”, false, 0"
     },
     {
-        "question": "What colour is a panda?",
-        "optionA": "Green and Yellow",
-        "optionB": "Blue and Red",
-        "optionC": "Green and White",
-        "optionD": "Black and White",
-        "answer": "Black and White"
+        "question": "What is the correct syntax for adding comments in JavaScript?",
+        "optionA": "<!–This is a comment–&gt",
+        "optionB": "//This is a comment",
+        "optionC": "–This is a comment",
+        "optionD": "**This is a comment**",
+        "answer": "//This is a comment"
     },
     {
-        "question": "Where is the smallest bone in the human body?",
-        "optionA": "The Chest",
-        "optionB": "The Ear",
-        "optionC": "The Legs",
-        "optionD": "The Hands",
-        "answer": "The Ear"
+        "question": "What is the method in JavaScript used to remove the whitespace at the beginning and end of any string?",
+        "optionA": "strip()",
+        "optionB": "trim()",
+        "optionC": "stripped()",
+        "optionD": "trimmed()",
+        "answer": "trim()"
     },
     {
         "question": "What does the roman numeral C represent?",
@@ -64,59 +64,59 @@
         "answer": "100"
     },
     {
-        "question": "What takes place in Hong Kong's Happy Valley?",
-        "optionA": "Chicken Wrestling",
-        "optionB": "Horse racing",
-        "optionC": "Street Racing",
-        "optionD": "Arm Wrestling",
-        "answer": "Horse racing"
+        "question": "jQuery: Which built-in method returns the character at the specified index?",
+        "optionA": " characterAt()",
+        "optionB": "getCharAt()",
+        "optionC": "charAt()",
+        "optionD": "None of the above",
+        "answer": "charAt()"
     },
     {
-        "question": "Who painted the Mona Lisa?",
-        "optionA": "Alexander Graham Bell",
-        "optionB": "Sir Isaac Newton",
-        "optionC": "Leonardo Da Vinci",
-        "optionD": "Albert Einstein",
-        "answer": "Leonardo Da Vinci"
+        "question": "What is the correct JavaScript syntax to write "Hello World"?",
+        "optionA": "("Hello World");",
+        "optionB": "response.write("Hello World");",
+        "optionC": "echo "Hello World"",
+        "optionD": "document.write("Hello World")",
+        "answer": "document.write("Hello World")"
     },
     {
-        "question": "What’s the most important book in the Moslem religion?",
-        "optionA": "The Koran",
-        "optionB": "The Dictionary",
-        "optionC": "The Bible",
-        "optionD": "The Chemistry text Book",
-        "answer": "The Koran"
+        "question": "Where is the correct place to insert a JavaScript?",
+        "optionA": "The <body> section",
+        "optionB": "Both the <head> section and the <body>",
+        "optionC": "section are correct",
+        "optionD": "The <head> section",
+        "answer": "Both the <head> section and the <body></body>"
     },
     {
-        "question": "What’s the capital of Ethiopia?",
-        "optionA": "Cape Town",
-        "optionB": "San Francisco",
-        "optionC": "Abuja",
-        "optionD": "Syndey",
-        "answer": "Addis Ababa"
+        "question": "How do you create a function in JavaScript?",
+        "optionA": "function:myFunction()",
+        "optionB": "function = myFunction()",
+        "optionC": "function myFunction()",
+        "optionD": "None of Above",
+        "answer": "function myFunction()"
     },
     {
-        "question": "How many squares are there on a chess board?",
-        "optionA": "128",
-        "optionB": "64",
-        "optionC": "32",
-        "optionD": "256",
-        "answer": "64"
+        "question": "Which of the following is not a valid JavaScript variable name?",
+        "optionA": "2java",
+        "optionB": "_java_and_java_names",
+        "optionC": "javaandjava",
+        "optionD": "None of the Above",
+        "answer": "2java"
     },
     {
-        "question": "Who invented the electric light bulb?",
-        "optionA": "Tom Cruise",
-        "optionB": "Barack Obama",
-        "optionC": "Wole Soyinka",
-        "optionD": "Thomas Edison",
-        "answer": "Thomas Edison"
+        "question": "Which of the ways below is incorrect of instantiating a date?",
+        "optionA": "new Date(dateString)",
+        "optionB": "new Date()",
+        "optionC": "new Date(seconds)",
+        "optionD": "new Date(year, month, day, hours, minutes, seconds, milliseconds)",
+        "answer": "new Date(seconds)"
     },
     {
-        "question": "What are the first three words of the bible?",
-        "optionA": "be with everyone",
-        "optionB": "Again Jesus asked",
-        "optionC": "In the beginning",
-        "optionD": "At that time",
-        "answer": "In the beginning"
+        "question": "What is the alternate name for Java script?",
+        "optionA": "LimeScript",
+        "optionB": "Both a and d",
+        "optionC": "ECMScript",
+        "optionD": " ECMAScript",
+        "answer": " ECMAScript"
     }
 ]
