@@ -1,0 +1,122 @@
+[
+    {
+        "question": "JavaScript is a ________ Side Scripting Language.",
+        "optionA": "Server",
+        "optionB": "ISP",
+        "optionC": "Browser",
+        "optionD": "None of Above",
+        "answer": "Browser"
+    },
+    {
+        "question": "Which of the following is an advantage of using JavaScript?",
+        "optionA": "Increased interactivity",
+        "optionB": "Less server interaction",
+        "optionC": "Immediate feedback from the users",
+        "optionD": "All of the above",
+        "answer": "All of the above"
+    },
+    {
+        "question": "What is the HTML tag under which one can write the JavaScript code?",
+        "optionA": "javascript",
+        "optionB": "scripted",
+        "optionC": "script",
+        "optionD": "js",
+        "answer": "script"
+    },
+    {
+        "question": "Which of the following is not a JSON type?",
+        "optionA": "Object",
+        "optionB": "date",
+        "optionC": "Array",
+        "optionD": "string",
+        "answer": "date"
+    },
+    {
+        "question": "Which answer represents the following order of TYPES? Object, String, Boolean, Number",
+        "optionA": " “{ }”, “a string”, “false”, “0” ",
+        "optionB": "[ ], 0, “true”, “0”",
+        "optionC": "{ }, “0”, false, 0",
+        "optionD": "{ }, hello, “false”, “0” ",
+        "answer": "{ }, “0”, false, 0"
+    },
+    {
+        "question": "What is the correct syntax for adding comments in JavaScript?",
+        "optionA": "<!–This is a comment–&gt",
+        "optionB": "//This is a comment",
+        "optionC": "–This is a comment",
+        "optionD": "**This is a comment**",
+        "answer": "//This is a comment"
+    },
+    {
+        "question": "What is the method in JavaScript used to remove the whitespace at the beginning and end of any string?",
+        "optionA": "strip()",
+        "optionB": "trim()",
+        "optionC": "stripped()",
+        "optionD": "trimmed()",
+        "answer": "trim()"
+    },
+    {
+        "question": "What does the roman numeral C represent?",
+        "optionA": "100",
+        "optionB": "10",
+        "optionC": "10,000",
+        "optionD": "1,000,000",
+        "answer": "100"
+    },
+    {
+        "question": "jQuery: Which built-in method returns the character at the specified index?",
+        "optionA": " characterAt()",
+        "optionB": "getCharAt()",
+        "optionC": "charAt()",
+        "optionD": "None of the above",
+        "answer": "charAt()"
+    },
+    {
+        "question": "What is the correct JavaScript syntax to write "Hello World"?",
+        "optionA": "("Hello World");",
+        "optionB": "response.write("Hello World");",
+        "optionC": "echo "Hello World"",
+        "optionD": "document.write("Hello World")",
+        "answer": "document.write("Hello World")"
+    },
+    {
+        "question": "Where is the correct place to insert a JavaScript?",
+        "optionA": "The <body> section",
+        "optionB": "Both the <head> section and the <body>",
+        "optionC": "section are correct",
+        "optionD": "The <head> section",
+        "answer": "Both the <head> section and the <body></body>"
+    },
+    {
+        "question": "How do you create a function in JavaScript?",
+        "optionA": "function:myFunction()",
+        "optionB": "function = myFunction()",
+        "optionC": "function myFunction()",
+        "optionD": "None of Above",
+        "answer": "function myFunction()"
+    },
+    {
+        "question": "Which of the following is not a valid JavaScript variable name?",
+        "optionA": "2java",
+        "optionB": "_java_and_java_names",
+        "optionC": "javaandjava",
+        "optionD": "None of the Above",
+        "answer": "2java"
+    },
+    {
+        "question": "Which of the ways below is incorrect of instantiating a date?",
+        "optionA": "new Date(dateString)",
+        "optionB": "new Date()",
+        "optionC": "new Date(seconds)",
+        "optionD": "new Date(year, month, day, hours, minutes, seconds, milliseconds)",
+        "answer": "new Date(seconds)"
+    },
+    {
+        "question": "What is the alternate name for Java script?",
+        "optionA": "LimeScript",
+        "optionB": "Both a and d",
+        "optionC": "ECMScript",
+        "optionD": " ECMAScript",
+        "answer": " ECMAScript"
+    }
+]

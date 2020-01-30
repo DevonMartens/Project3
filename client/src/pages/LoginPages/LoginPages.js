@@ -1,5 +1,13 @@
 import React from "react";
 import "./style.css";
+// require('dotenv').config()
+// import GITHUB from '../../config';
+const keys = require('../../config').clientID;
+
+// import GameHeader from "../components/GameHeader";
+const url = 'https://github.com/login/oauth/authorize?client_id=' + keys;
+
+
 
 function LoginPages() {
   // return (
@@ -13,7 +21,11 @@ function LoginPages() {
           <div className="header">
             <h1 className="game-intro">Sign In or Register your account</h1>
           </div>
+<<<<<<< HEAD
           <div className="login-box">
+=======
+          <div className="login-box"> 
+>>>>>>> fee73a4f18d8798c33f763fd702687a58c80aea2
           <p className="Login-text">Sign In</p>
             <div className="input-group">
               <label htmlFor="username">Username</label>
@@ -74,8 +86,20 @@ function LoginPages() {
                 className="register-password"
                 placeholder="Register password"/>
                 <br></br>
+<<<<<<< HEAD
                 <button className="register-btn">Register</button>
             </div>
+=======
+                <button className="register-btn character-img">Register</button>
+                <button className="register-btn character-img">Register</button>
+                <button className="register-btn character-img">Register</button>
+                <button className="register-btn character-img">Register</button>
+
+              <button className="sugnin-btn" type="submit" id="github">
+                <a href = {url}>Sign in With Github</a>
+                </button>      
+                </div>
+>>>>>>> fee73a4f18d8798c33f763fd702687a58c80aea2
           </div>
           </div>
         </div>

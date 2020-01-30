@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+// import userInfo from ('./routes/api/github.js');
 
 function ProfilePages() {
   return (
@@ -11,9 +12,14 @@ function ProfilePages() {
       <div className="stackdeveloper">
         <p>stack devloper position will go here******MAYBE*****</p>
       </div>
+<<<<<<< HEAD
       <div className="">
 
       </div>
+=======
+      {/* <div className="githubLink">{userInfo.html_url}
+      </div> */}
+>>>>>>> fee73a4f18d8798c33f763fd702687a58c80aea2
     </div>
   );
   
