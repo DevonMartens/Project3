@@ -9,7 +9,7 @@ const UserSchema = new mongoose.Schema({
   githubLink: {type: String, required: true},
   email: {type: String, required: true},
   phone: {type: String, required: false},
-  passoword: {type: String, required: true},
+  password: {type: String, required: true},
   // score: {type: Number, required: true, default: 0}, 
   questionsCorrect: {type: Number, required: true, default: 0}, 
   questionsTotal: {type: Number, required: true}, 
