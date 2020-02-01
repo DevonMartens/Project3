@@ -12,7 +12,7 @@ function ProfilePages() {
       <div className="stackdeveloper">
         <p>stack devloper position will go here******MAYBE*****</p>
       </div>
-<<<<<<< HEAD
+
       <div className="">
 
       </div>

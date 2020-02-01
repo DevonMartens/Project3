@@ -3,11 +3,10 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import GameHeader from "./pages/components/GameHeader";
 import Game from "./pages/GamePages";
 import Login from "./pages/LoginPages";
-<<<<<<< HEAD
+
 // import LoginPages from "./pages/LoginPages/LoginPages";
-=======
+
 import Nav from "./pages/components/Nav"
->>>>>>> fee73a4f18d8798c33f763fd702687a58c80aea2
 import Profile from "./pages/ProfilePages";
 import QuizInstructions from "./pages/QuizInstructions";
 // kyles
