@@ -19,7 +19,9 @@ const UserSchema = new mongoose.Schema({
 });
 
 // const User = mongoose.model("User", userSchema);
-
+// }, {
+//     collection: 'User'
+// });
 UserSchema.methods.generateHash = function(passoword){
   return.bcrypt.hashSync(passoword, bcrypt.genSaltSync(8), null);
 }
@@ -28,7 +30,7 @@ UserSchema.methods.validPassword = function(passoword){
   return bcrypt.compareSync(passoword, this.passoword);
 };
 
-module.exports = mongoose.model('User', 'UserSchema');
+module.exports = mongoose.model('User', UserSchema);
 
 const mongoose = require('mongoose');
 
