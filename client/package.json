@@ -5,11 +5,15 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "bcrypt": "^3.0.7",
     "dotenv": "^8.2.0",
+    "mongodb": "^3.5.2",
+    "mongoose": "^5.8.11",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^2.1.1"
+    "react-scripts": "^2.1.1",
+    "whatwg-fetch": "^3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

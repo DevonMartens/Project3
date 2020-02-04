@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import React, { Component } from 'react';
 import 'whatwg-fetch';
 //may need to go to compents folder
 import {
@@ -6,6 +7,7 @@ import {
   setInStorage,
 } from '../../utils/storage.js';
 ​
+
 class Register extends Component {
   constructor(props) {
     super(props);
@@ -279,17 +281,7 @@ if (!token) {
                 <br></br>
                 <button className="signin-btn">Sign In</button>
             </div>
-            </div>
-      
-            {/* <button
-              type="button"
-              className="login-btn"
-              onClick={this.submitLogin
-              .bind(this)}>Login</button>  */}
-           
-​
-              {/* Registration Section */}
-        
+
           <div className="outter-container" ></div>
           <div className="header">
           New User Registeration
@@ -357,7 +349,7 @@ if (!token) {
                 name="Character's Name"
                 className="login-input"
                 placeholder="Character's name"/>
-            </div> */
+            </div> 
 ​
 ​
              <div className="input-group">
@@ -391,16 +383,22 @@ if (!token) {
                 value={SignUpLang}
                 onChange={this.onTextboxChangeSignUpLang}/>
     <button onClick={this.onSignUp}>Sign Up</button>
-
-    </div>
-          </div>
-
   
         <p>Account</p>
         <button onClick={this.logout}>Logout</button>
+</div> 
+</div>     
+</div>   
+);
+    }
 
-  )     
-    
-};
+    return (
+      <div>
+        <p>Account</p>
+        <button onClick={this.logout}>Logout</button>
+      </div>
+    );
+  }
+}
 
 export default Register;
