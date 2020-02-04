@@ -6,14 +6,11 @@ import {
   getFromStorage,
   setInStorage,
 } from '../../utils/storage.js';
-​
-
 class Register extends Component {
   constructor(props) {
     super(props);
-​
     this.state = {
-     isLoading: true,
+     isLoading: false,
      token: '',
      signUpError:'',
      signInError:'',
@@ -22,7 +19,7 @@ class Register extends Component {
      signUpUsername:'', 
      signUplocation:'', 
      signUpUserType:'', 
-     signUpGithubLink:'', 
+     signUpGithubLink:'',  
      signUpEmail:'',   
      signUpPassword:'',  
      signUpPhone:'',  
@@ -42,11 +39,10 @@ class Register extends Component {
     this.onTextboxChangeSignUpLang = this.onTextboxChangeSignUpLang.bind(this);
     this.onSignIn = this.onSignIn.bind(this);
     this.onSignUp= this.onSignUp.bind(this);
-    this.onlogout= this.onlogout.bind(this);
+  this.onlogout= this.onlogout.bind(this);
   }
   componentDidMount() {
   const obj = getFromStorage('the_main_app');
-​
   if(obj && obj.token){
     const {token} = obj;
     fetch('/api/account/verify?token' + token)
@@ -65,20 +61,17 @@ this.setState({
 });
   };
 };
-​
 // sign in on change
   onTextboxChangeSignInEmail(event) {
     this.setState({
       signInEmail: event.target.value,
     });
   }
-​
   onTextboxChangeSignInPassword(event) {
     this.setState({
       signInPassword: event.target.value,
     });
   }
-​
   // sign up on change
   onTextboxChangesignUpUsername(event) {
     this.setState({
@@ -120,7 +113,6 @@ this.setState({
       SignUpLang: event.target.value,
     });   
   }
-​
 onSignUp() {
 // grab state and post to backend
 const { 
@@ -172,10 +164,7 @@ signUpPassword:'',
 
 //sign in
   onSignIn(){
-    const { 
-      signInPassword, 
-     signInPassword,
-    } = this.setState;
+    const {signInPassword, signInEmail} = this.setState;
   // Post request to backend
   fetch('/api/account/signin', {
     method: 'POST',
@@ -206,7 +195,7 @@ signUpPassword:'',
     });
 }
   
-    logout() {
+    onlogout() {
       this.setState({
         isLoading: true,
       });
@@ -238,7 +227,7 @@ render() {
   const {
       isLoading,
       token,
-      signInError,
+      // signInError,
       signInEmail,
       signInPassword,
       signUpUsername,
@@ -249,15 +238,11 @@ render() {
       signUpPassword,  
       signUpPhone,  
       SignUpLang
-  } = this.state; 
-​if (isLoading) {
-  return (<div><p>Loading...</p></div>);
-}
-if (!token) {
-  return (
+  } = this.state; if (isLoading) {return (<div><p>Loading...</p></div>);}
+if (!token) {return (
   <div className ="login-box">  
 
-          <p className="Login-text">Sign In></p>
+          <p className="Login-text">Sign In</p>
       
             <div className="input-group">
               <p htmlFor="=email">Enter email associated with your Github</p>
@@ -394,7 +379,6 @@ if (!token) {
 
     return (
       <div>
-        <p>Account</p>
         <button onClick={this.logout}>Logout</button>
       </div>
     );

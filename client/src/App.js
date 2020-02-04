@@ -5,7 +5,7 @@ import Game from "./pages/GamePages";
 import Login from "./pages/LoginPages";
 import Nav from "./pages/components/Nav"
 import Profile from "./pages/ProfilePages";
-import Register from "./pages/RegistrationPage";
+import Register from "./pages/RegistrationPage/Register";
 import QuizInstructions from "./pages/QuizInstructions";
 // kyles
 // import QuizInstructions from '../../pages/GamePages/QuizInstructions';
@@ -22,7 +22,8 @@ function App() {
       
       {/* kyles input  */}
           <Route path="/play/instructions" component={QuizInstructions}></Route>
-          <Route exact path="/register" component={Register}></Route>
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/register" component={Register} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/game" component={Game} />
         </div>

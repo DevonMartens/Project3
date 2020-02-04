@@ -20,16 +20,10 @@ const UserSchema = new mongoose.Schema({
 
 // const User = mongoose.model("User", userSchema);
 
-UserSchema.methods.generateHash = function(passoword){
-  return.bcrypt.hashSync(passoword, bcrypt.genSaltSync(8), null);
-}
-
-UserSchema.methods.validPassword = function(passoword){
-  return bcrypt.compareSync(passoword, this.passoword);
+UserSchema.methods.generateHash = function(password) {
+  return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
 };
-
-module.exports = mongoose.model('User', 'UserSchema');
-
-const mongoose = require('mongoose');
-
-
+UserSchema.methods.validPassword = function(password) {
+  return bcrypt.compareSync(password, this.password);
+};
+module.exports = mongoose.model('User', UserSchema);
