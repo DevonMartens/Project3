@@ -1,4 +1,4 @@
-iimport React, { Component } from 'react';
+import React, { Component } from 'react';
 import 'whatwg-fetch';
 //may need to go to compents folder
 import {
@@ -166,24 +166,29 @@ signUpPassword:'',
   });
 }
 });
-​
-  onSignIn()
+}
+
+//sign in
+  onSignIn(){
     const { 
       signInPassword, 
      signInPassword,
     } = this.setState;
-    fetch('/api/account/signin',
-    {method: 'POST',
-    body: JSON.stringify}
-​
-​
-    .setInStorage ('the_main_app', {token:json.token}),
-     { email: signIpEmail,
+  // Post request to backend
+  fetch('/api/account/signin', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      email: signInEmail,
       password: signInPassword,
-    }
-    .then(res => res.json()) 
+    }),
+  }).then(res => res.json())
     .then(json => {
-    if (json.success){
+      console.log('json', json);
+      if (json.success) {
+        setInStorage('the_main_app', { token: json.token });
         this.setState({
     signInError: json.message,
     signInEmail:'',
@@ -191,40 +196,44 @@ signUpPassword:'',
     token: json.token,
         });
       } else {
-      this.setState({
-        signInError: json.message,
-        isLoading: false,
-      });
-    }
-    })
-  
-  
-  
-  
-  
-  logout();
-
-  const {signInPassword, signInPassword} = this.setState;
-  fetch('/api/account/logout?token=' + token),
-  {
-    method: 'POST',
-  body: JSON.stringify({setInStorage('the_main_app'{token: json,token}); 
-    email: signIpEmail,
-    password: signInPassword,
-  }
-  .then(res => res.json()) 
-  .then(json => {
-  if (json.success){
-      this.setState({
-  token: '',
-  isLoading: false
-      });
-    }
+        this.setState({
+          signInError: json.message,
+          isLoading: false,
+        });
+      }
+    });
 }
-​
   
-  
-  {
+    logout() {
+      this.setState({
+        isLoading: true,
+      });
+      const obj = getFromStorage('the_main_app');
+      if (obj && obj.token) {
+        const { token } = obj;
+        // Verify token
+        fetch('/api/account/logout?token=' + token)
+          .then(res => res.json())
+          .then(json => {
+            if (json.success) {
+              this.setState({
+                token: '',
+                isLoading: false
+              });
+            } else {
+              this.setState({
+                isLoading: false,
+              });
+            }
+          });
+      } else {
+        this.setState({
+          isLoading: false,
+        });
+      }
+    }
+render() {
+  const {
       isLoading,
       token,
       signInError,
@@ -238,23 +247,16 @@ signUpPassword:'',
       signUpPassword,  
       signUpPhone,  
       SignUpLang
-  } = this.state 
-​
-​
-   if (isLoading) {
-    return (<div><p>Loading...</p></div>);
-if (token)
-    return (
-​
-<div className ="login-box">  <div>
-​
-{
-  (signInError) ? (
-  <p>{signInError}</p>
-  ) : (null)
+  } = this.state; 
+​if (isLoading) {
+  return (<div><p>Loading...</p></div>);
 }
-          <p> className="Login-text">Sign In</p>
-        {/* sign in email */}
+if (!token) {
+  return (
+  <div className ="login-box">  
+
+          <p className="Login-text">Sign In></p>
+      
             <div className="input-group">
               <p htmlFor="=email">Enter email associated with your Github</p>
             <label htmlFor="Email">Github Email</label>
@@ -278,13 +280,13 @@ if (token)
                 <button className="signin-btn">Sign In</button>
             </div>
             </div>
-            </div>
-            /* <button
+      
+            {/* <button
               type="button"
               className="login-btn"
               onClick={this.submitLogin
-              .bind(this)}>Login</button> 
-              go to componets for button attributes*/}
+              .bind(this)}>Login</button>  */}
+           
 ​
               {/* Registration Section */}
         
@@ -343,11 +345,11 @@ if (token)
                 placeholder="Email"
                 value={signUpEmail}
                 onChange={this.onTextboxChangesignUpEmail}/>
-​
+     
             </div>
+​   
 ​
-​
-           /* <div className="input-group">
+           <div className="input-group">
               <p className="register-username">Enter your character's name</p>
               <label htmlFor="register-username">Username</label>
               <input
@@ -388,26 +390,17 @@ if (token)
                 placeholder="Programming Languages You Would Like to Test On"
                 value={SignUpLang}
                 onChange={this.onTextboxChangeSignUpLang}/>
- </div>
-<div>
- <button className="signin-btn">Sign Up</button>
- </div>        
- <div>    
-  <button onclick={this.logout}>logout</button>
-   </div>    
-  {/* </div>    
- 
-   
-  }
-  return (
-    <div>
-<p>
-Account
-</p> */}
-    {/* </div> */}
-          
-          );
-        }
+    <button onClick={this.onSignUp}>Sign Up</button>
+
+    </div>
+          </div>
+
+  
+        <p>Account</p>
+        <button onClick={this.logout}>Logout</button>
+
+  )     
     
-    
+};
+
 export default Register;

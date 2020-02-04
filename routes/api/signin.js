@@ -68,7 +68,9 @@ app.post('/api/account/signup', (req, res, next) => {
             message: 'Error: Please enter your preffered coding langauges.'
         });
     }
+
     email = email.toLowerCase();
+    email = email.trim();
 
     User.find({
         email: email
@@ -89,14 +91,20 @@ app.post('/api/account/signup', (req, res, next) => {
             newUser.languages = languages;
             newUser.save((err, user) => {})
             if (err) {
+                return res.send({
+                  success: false,
+                  message: 'Error: Server error'
+                });
+              }
+            if (err) {
                 res.end({
                     success: true,
                     message: 'signed up'
                 });
-       
-
-    });
-\
+            };
+          };
+        });
+      
 app.post('/api/account/signup', (req, res, next) => {
         const {
             body
@@ -124,14 +132,17 @@ app.post('/api/account/signup', (req, res, next) => {
 );
 
 const user = users[0];
-if (!user.validPassword(password) {
-        return res.send({
-            success: false,
-            message: 'invalid user'
-        });
-    }
+if (!user.validPassword(password)) {
+  return res.send({
+    success: false,
+    message: 'Error: Invalid'
+  });
+}
+
     // otherwise correct user  
-    const userSession = new UserSession(); userSession.userId = user._id; userSession.save(err, doc) => {
+    const userSession = new UserSession(); 
+    userSession.userId = user._id; 
+    userSession.save((err, doc) => {
         if (err) {
             return res.send({
                 success: false,
@@ -143,64 +154,71 @@ if (!user.validPassword(password) {
             message: 'Sucess you can be a software engineer',
             token: doc._id,
         });
-    };
-    };
+    });
+  };
 
-  app.post('/api/account/signup', (req, res, next) => { 
-    app.post('/api/account/signup', (req, res, next) => { 
-
-        app.post('/api/account/verify, (req, res, next) => { 
-            const { query } req;
-            const { token } req;
+        app.get('/api/account/verify', (req, res, next) => {
+            // Get the token
+            const { query } = req;
+            const { token } = query;
+            // ?token=test
+        
+            // Verify the token is one of a kind and it's not deleted.
+        
+            UserSession.find({
+              _id: token,
+              isDeleted: false
+            }, (err, sessions) => {
+              if (err) {
+                console.log(err);
+                return res.send({
+                  success: false,
+                  message: 'Error: Server error'
+                });
+              }
+        
+              if (sessions.length != 1) {
+                return res.send({
+                  success: false,
+                  message: 'Error: Invalid'
+                });
+              } else {
+                return res.send({
+                  success: true,
+                  message: 'Good'
+                });
+              }
+            });
+          });
+        
+          app.get('/api/account/logout', (req, res, next) => {
+            // Get the token
+            const { query } = req;
+            const { token } = query;
+            // ?token=test
+        
+            // Verify the token is one of a kind and it's not deleted.
+        
+            UserSession.findOneAndUpdate({
+              _id: token,
+              isDeleted: false
+            }, {
+              $set: {
+                isDeleted:true
+              }
+            }, null, (err, sessions) => {
+              if (err) {
+                console.log(err);
+                return res.send({
+                  success: false,
+                  message: 'Error: Server error'
+                });
+              }
+        
+              return res.send({
+                success: true,
+                message: 'Good'
+            });
+        });
+      });
     
-UserSession.find({
-_id: token,
-isDeleted: false,
-},  (err, sessions) => {
-    return res.send({
-        success: false,
-        message: 'Error' 
-})
-if (sessions.length != 1)
-return res.send({
-    success: false,
-    message: 'Error: invalid'
-}) else ({
-    return res.send({
-        success: true,
-        message: 'good'
-    })
-
-
-app.post('/api/account/logout', (req, res, next) => { 
-    const { query } req;
-    const { token } req;
-
-UserSession.findOneAndUpdate({
-_id: token,
-isDeleted: false,{
-$set:{isDeleted:true}
-}, null, (err, sessions) => {
-return res.send({
-success: false,
-message: 'Error' 
-});
-}
-if (sessions.length != 1)
-return res.send({
-success: false,
-message: 'Error: invalid'
-});
-} else {
-return res.send({
-success: true,
-message: 'good'
-})
-}
-    })
-
-
-});
-};
-});
-};
