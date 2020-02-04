@@ -160,24 +160,17 @@ isDeleted: false,
     return res.send({
         success: false,
         message: 'Error' 
-    });
-}
+})
 if (sessions.length != 1)
 return res.send({
     success: false,
     message: 'Error: invalid'
-});
-} else {
+}) else ({
     return res.send({
         success: true,
         message: 'good'
     })
-}
-            })
 
-
-});
-};
 
 app.post('/api/account/logout', (req, res, next) => { 
     const { query } req;

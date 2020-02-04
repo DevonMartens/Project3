@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+iimport React, { Component } from 'react';
 import 'whatwg-fetch';
 //may need to go to compents folder
 import {
   getFromStorage,
   setInStorage,
 } from '../../utils/storage.js';
-
+​
 class Register extends Component {
   constructor(props) {
     super(props);
-
+​
     this.state = {
      isLoading: true,
      token: '',
@@ -44,7 +44,7 @@ class Register extends Component {
   }
   componentDidMount() {
   const obj = getFromStorage('the_main_app');
-
+​
   if(obj && obj.token){
     const {token} = obj;
     fetch('/api/account/verify?token' + token)
@@ -63,20 +63,20 @@ this.setState({
 });
   };
 };
-
+​
 // sign in on change
   onTextboxChangeSignInEmail(event) {
     this.setState({
       signInEmail: event.target.value,
     });
   }
-
+​
   onTextboxChangeSignInPassword(event) {
     this.setState({
       signInPassword: event.target.value,
     });
   }
-
+​
   // sign up on change
   onTextboxChangesignUpUsername(event) {
     this.setState({
@@ -118,9 +118,7 @@ this.setState({
       SignUpLang: event.target.value,
     });   
   }
-}); 
-}; 
-};
+​
 onSignUp() {
 // grab state and post to backend
 const { 
@@ -168,7 +166,7 @@ signUpPassword:'',
   });
 }
 });
-
+​
   onSignIn()
     const { 
       signInPassword, 
@@ -176,8 +174,10 @@ signUpPassword:'',
     } = this.setState;
     fetch('/api/account/signin',
     {method: 'POST',
-    body: JSON.stringify)
- setInStorage('the_main_app', {token:json.token}),
+    body: JSON.stringify}
+​
+​
+    .setInStorage ('the_main_app', {token:json.token}),
      { email: signIpEmail,
       password: signInPassword,
     }
@@ -196,17 +196,22 @@ signUpPassword:'',
         isLoading: false,
       });
     }
-    });
-  }
-logout () 
+    })
+  
+  
+  
+  
+  
+  logout();
+
   const {signInPassword, signInPassword} = this.setState;
   fetch('/api/account/logout?token=' + token),
   {
     method: 'POST',
-  body: JSON.stringify({setInStorage('the_main_app', {token: json.token}); 
-   email: signIpEmail,
+  body: JSON.stringify({setInStorage('the_main_app'{token: json,token}); 
+    email: signIpEmail,
     password: signInPassword,
-  })
+  }
   .then(res => res.json()) 
   .then(json => {
   if (json.success){
@@ -216,8 +221,10 @@ logout ()
       });
     }
 }
-  render() {
-  const {
+​
+  
+  
+  {
       isLoading,
       token,
       signInError,
@@ -232,18 +239,21 @@ logout ()
       signUpPhone,  
       SignUpLang
   } = this.state 
-  if(isLoading) {
-    return (<div><p>Loading...</p></div>): }
-if (!token)
+​
+​
+   if (isLoading) {
+    return (<div><p>Loading...</p></div>);
+if (token)
     return (
-
-<div className="login-box"> 
+​
+<div className ="login-box">  <div>
+​
 {
   (signInError) ? (
   <p>{signInError}</p>
   ) : (null)
 }
-          <p className="Login-text">Sign In</p>
+          <p> className="Login-text">Sign In</p>
         {/* sign in email */}
             <div className="input-group">
               <p htmlFor="=email">Enter email associated with your Github</p>
@@ -269,20 +279,20 @@ if (!token)
             </div>
             </div>
             </div>
-            {/* <button
+            /* <button
               type="button"
               className="login-btn"
               onClick={this.submitLogin
               .bind(this)}>Login</button> 
               go to componets for button attributes*/}
-
+​
               {/* Registration Section */}
         
-          <div className="outter-container">
+          <div className="outter-container" ></div>
           <div className="header">
           New User Registeration
           </div>
-          <div className="Registration-box">
+          <div className="Registration-box"> </div>
           <div className="input-group">
           <label htmlFor="username">Please Enter a Username(Be Professional)</label>
           <input
@@ -333,9 +343,11 @@ if (!token)
                 placeholder="Email"
                 value={signUpEmail}
                 onChange={this.onTextboxChangesignUpEmail}/>
-
+​
             </div>
-            {/* <div className="input-group">
+​
+​
+           /* <div className="input-group">
               <p className="register-username">Enter your character's name</p>
               <label htmlFor="register-username">Username</label>
               <input
@@ -343,7 +355,9 @@ if (!token)
                 name="Character's Name"
                 className="login-input"
                 placeholder="Character's name"/>
-            </div> */}
+            </div> */
+​
+​
              <div className="input-group">
           <label htmlFor="username">If you wish to be contacted via phone please enter your phone number(optional)</label>
           <input
@@ -380,6 +394,7 @@ if (!token)
  </div>        
  <div>    
   <button onclick={this.logout}>logout</button>
+   </div>    
   {/* </div>    
  
    
