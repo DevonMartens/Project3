@@ -1,4 +1,4 @@
-import React from "react";
+  import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import GameHeader from "./pages/components/GameHeader";
 import Game from "./pages/GamePages";
